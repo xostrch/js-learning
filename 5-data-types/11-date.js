@@ -40,4 +40,77 @@ console.log( getDateAgo(date4, 365) ); // 2, (2 Jan 2014)
 
 
 console.log("===EXERCIE 5===");
-//PRZECZYTAC CALE I DOKONCZYC ZADANIA
+function getLastDayOfMonth(year, month){
+    let date = new Date(year,month + 1, 0);
+    return date.getDate();
+}
+
+console.log(getLastDayOfMonth(2012,0));
+console.log(getLastDayOfMonth(2012,1));
+console.log(getLastDayOfMonth(2013,1));
+
+
+
+console.log("===EXERCIE 6===");
+function getSecondsToday(){
+    let now = new Date();
+    let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    let diff = now - today;
+    return Math.round(diff / 1000);
+}
+
+console.log(getSecondsToday());
+
+
+console.log("===EXERCIE 7===");
+function getSecondsTomorrow(){
+    let now = new Date();
+    let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+
+    let diff = tomorrow - now;
+    return Math.round(diff / 1000);
+}
+
+console.log(getSecondsTomorrow());
+
+
+
+console.log("===EXERCIE 8===");
+function formatDate(date){
+    let diff = new Date() - date;
+
+    if(diff < 1000){
+        return 'right now';
+    }
+
+    let sec = Math.floor(diff / 1000);
+
+    if(sec < 60){
+        return `${sec} sec. ago`;
+    }
+
+    let min = Math.floor(diff / 60000);
+
+    if(min < 60){
+        return `${min} min. ago`;
+    }
+
+     let d = [
+        '0' + date.getDate(),
+        '0' + (date.getMonth() + 1), 
+        '' + date.getFullYear(),
+        '0' + date.getHours(),
+        '0' + date.getMinutes()
+    ].map(part => part.slice(-2)); 
+
+    return `${d[0]}.${d[1]}.${d[2]} ${d[3]}:${d[4]}`;
+
+}
+
+console.log( formatDate(new Date(new Date - 1)) ); // "right now"
+console.log( formatDate(new Date(new Date - 30 * 1000)) ); // "30 sec. ago"
+console.log( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min. ago"
+
+// yesterday's date like 31.12.16 20:00
+console.log( formatDate(new Date(new Date - 86400 * 1000)) );
