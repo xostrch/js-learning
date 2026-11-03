@@ -45,3 +45,42 @@ document.getElementById('bubbleSortTableRandom').innerHTML = bubbleSortRandomTim
 document.getElementById('bubbleSortTableNearly').innerHTML = bubbleSortNearlySortedTime;
 document.getElementById('bubbleSortTableDupli').innerHTML = bubbleSortManyDuplicatesTime;
 document.getElementById('bubbleSortTableReversed').innerHTML = bubbleSortReversedTime;
+
+
+
+//wbudowane
+let builtInSortRandomTime = sredniCzas(builtInSort, randomData, 20);
+let builtInSortNearlySortedTime = sredniCzas(builtInSort, nearlySortedData, 20);
+let builtInSortManyDuplicatesTime = sredniCzas(builtInSort, manyDuplicatesData, 20);
+let builtInSortReversedTime = sredniCzas(builtInSort, reversedData, 20);
+
+document.getElementById('builtInSortTableRandom').innerHTML = builtInSortRandomTime;
+document.getElementById('builtInSortTableNearly').innerHTML = builtInSortNearlySortedTime;
+document.getElementById('builtInSortTableDupli').innerHTML = builtInSortManyDuplicatesTime;
+document.getElementById('builtInSortTableReversed').innerHTML = builtInSortReversedTime;
+
+
+
+// quick i babelkowe
+let quickBubbleSortRandomTime = sredniCzas(quickBubbleSort, randomData, 20);
+let quickBubbleSortNearlySortedTime = sredniCzas(quickBubbleSort, nearlySortedData, 20);
+let quickBubbleSortManyDuplicatesTime = sredniCzas(quickBubbleSort, manyDuplicatesData, 20);
+let quickBubbleSortReversedTime = sredniCzas(quickBubbleSort, reversedData, 20);
+
+document.getElementById('quickBubbleSortTableRandom').innerHTML = quickBubbleSortRandomTime;
+document.getElementById('quickBubbleSortTableNearly').innerHTML = quickBubbleSortNearlySortedTime;
+document.getElementById('quickBubbleSortTableDupli').innerHTML = quickBubbleSortManyDuplicatesTime;
+document.getElementById('quickBubbleSortTableReversed').innerHTML = quickBubbleSortReversedTime;
+
+
+
+// merge i babelkowe
+let mergeBubbleSortRandomTime = sredniCzas(mergeBubbleSort, randomData, 20);
+let mergeBubbleSortNearlySortedTime = sredniCzas(mergeBubbleSort, nearlySortedData, 20);
+let mergeBubbleSortManyDuplicatesTime = sredniCzas(mergeBubbleSort, manyDuplicatesData, 20);
+let mergeBubbleSortReversedTime = sredniCzas(mergeBubbleSort, reversedData, 20);
+
+document.getElementById('mergeBubbleSortTableRandom').innerHTML = mergeBubbleSortRandomTime;
+document.getElementById('mergeBubbleSortTableNearly').innerHTML = mergeBubbleSortNearlySortedTime;
+document.getElementById('mergeBubbleSortTableDupli').innerHTML = mergeBubbleSortManyDuplicatesTime;
+document.getElementById('mergeBubbleSortTableReversed').innerHTML = mergeBubbleSortReversedTime;
