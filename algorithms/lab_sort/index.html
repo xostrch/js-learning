@@ -21,8 +21,16 @@
         <tr><td id="builtInSortTableRandom"></td><td id="builtInSortTableNearly"></td><td id="builtInSortTableDupli"></td><td id="builtInSortTableReversed"></td><th>Wbudowane sortowanie</th></tr>
     </table>
     <p>Hipoteza: Najszybsze sortowanie wbudowane a najwolniejsze sortowanie bąbelkowe</p>
-    <p>Wnioski: Nie jestem w stanie potwierdzic hipotezy, poniewaz nie zdazylem zrobic sortowania wbudowanego
-        aczkolwiek, poki co sortowanie babelkowe zdecydowanie jest najwolniejsze.
+    <p>
+       Wnioski: Hipoteza potwierdzila sie czesciowo, mianowicie sortowanie babelkowe jest zdecydowanie 
+       najwolniejsze, mimo ze zawiera optymalizacje ktora i tak skraca jego czas wykonania.
+    </p>
+    <p>
+        Najszybsze okazaly sie wbudowane. Hybrid Quick + Bubble zdecydowanie najszybciej radzi sobie
+        ze wszystkimi danymi, oprócz tablicy z danymi, gdzie dane są wielokrotnie powtarzane.
+        Aczkolwiek radzi sobie tam najlepiej moja druga hybryda. Co ciekawe dodatkowo Hybrid Quick + Bubble
+        przegrywa jeszcze okolo o 0.02ms z Hybrid Merge + Bubble. Co ewidentnie potweirdza ze oba
+        sortowania hybrydowe dominują nad resztą sortowań
     </p>
     <script src="data.js"></script>
     <script src="quicksort.js"></script>
